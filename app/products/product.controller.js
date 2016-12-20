@@ -33,7 +33,8 @@ productCtrl.search = function(req, res) {
             console.log(err);
         } else {
             var result = JSON.parse(response.body);
-            res.render("products", { products: result.items });
+            res.send(result);
+            // res.render("products", { products: result.items });
         }
     })
 
